@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 
 type GenresType = {
-  id: Number;
-  name: String;
+  id: number;
+  name: string;
 };
 
 async function fetchGenres(): Promise<GenresType[]> {

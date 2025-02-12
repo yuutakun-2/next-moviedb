@@ -36,7 +36,6 @@ async function fetchUpcoming(): Promise<MovieType[]> {
 export default async function Home() {
   const popular = await fetchPopular();
   const upcoming = await fetchUpcoming();
-  const base_url = "http://image.tmdb.org/t/p/w185";
   return (
     <div>
       <h1 className="text-3xl font-bold px-2 my-2">Popular</h1>

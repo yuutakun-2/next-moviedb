@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type MovieType = {
   id: string;
@@ -24,7 +25,7 @@ export default async function MovieList({ movies }: { movies: MovieType[] }) {
               <Link href={`/movie/${movie.id}`}>
                 <div className="flex flex-col h-full justify-between">
                   {" "}
-                  <img
+                  <Image
                     src={base_url + movie.poster_path}
                     alt=""
                     className="mb-2"

@@ -1,10 +1,11 @@
+import Image from "next/image";
+
 type MovieType = {
   id: string;
   title: string;
   release_date: string;
   poster_path: string;
   overview: string;
-  base_url: string;
   backdrop_path: string;
 };
 
@@ -56,7 +57,7 @@ export default async function Detail({
         <h1 className="text-3xl font-bold px-2 my-2">{movie.title}</h1>
       </div>
       <div className="flex gap-2">
-        <img
+        <Image
           src={cover + movie.backdrop_path}
           alt={movie.title}
           className="w-[50%]"
@@ -68,7 +69,7 @@ export default async function Detail({
         {casts.map((cast) => {
           return (
             <div key={cast.id} className="w-[128px] text-center">
-              <img src={profile + cast.profile_path} alt={cast.name} />
+              <Image src={profile + cast.profile_path} alt={cast.name} />
               <b>{cast.name}</b>
               <div className="text-gray-600 text-sm">{cast.character}</div>
             </div>
