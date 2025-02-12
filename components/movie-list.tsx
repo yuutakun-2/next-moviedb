@@ -29,6 +29,9 @@ export default async function MovieList({ movies }: { movies: MovieType[] }) {
                     src={base_url + movie.poster_path}
                     alt=""
                     className="mb-2"
+                    width={185}
+                    height={0}
+                    layout="intrinsic"
                   />{" "}
                   <div className="flex flex-col">
                     {" "}
